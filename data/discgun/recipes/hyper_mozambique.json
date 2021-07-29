@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " ii",
+        "DBR",
+        " IL"
+    ],
+    "key": {
+        "i": {
+            "item": "minecraft:gold_ingot"
+        },
+        "D": {
+            "item": "minecraft:dispenser"
+        },
+        "B": {
+            "item": "minecraft:end_crystal"
+        },
+        "R": {
+            "item": "minecraft:repeater"
+        },
+        "I": {
+            "item": "minecraft:netherite_ingot"
+        },
+        "L": {
+            "item": "minecraft:lever"
+        }
+    },
+    "result": {
+        "item": "minecraft:chest",
+        "count": 1
+    }
+}

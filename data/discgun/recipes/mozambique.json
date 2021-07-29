@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " ii",
+        "DBR",
+        " IL"
+    ],
+    "key": {
+        "i": {
+            "item": "minecraft:iron_ingot"
+        },
+        "D": {
+            "item": "minecraft:dispenser"
+        },
+        "B": {
+            "item": "minecraft:blaze_powder"
+        },
+        "R": {
+            "item": "minecraft:repeater"
+        },
+        "I": {
+            "item": "minecraft:iron_trapdoor"
+        },
+        "L": {
+            "item": "minecraft:lever"
+        }
+    },
+    "result": {
+        "item": "minecraft:chest",
+        "count": 1
+    }
+}
