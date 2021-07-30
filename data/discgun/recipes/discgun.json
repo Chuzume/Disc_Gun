@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#i ",
+        "iCO",
+        " OR"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:stonecutter"
+        },
+        "i": {
+            "item": "minecraft:iron_ingot"
+        },
+        "C": {
+            "item": "minecraft:crossbow"
+        },
+        "O": {
+            "tag": "minecraft:logs"
+        },
+        "R": {
+            "item": "minecraft:redstone_block"
+        }
+    },
+    "result": {
+        "item": "minecraft:chest",
+        "count": 1
+    }
+}

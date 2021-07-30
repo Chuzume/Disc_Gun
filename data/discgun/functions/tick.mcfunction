@@ -8,10 +8,14 @@
 # スコアID
     execute as @a unless score @s D.Gun_Pl.ID matches 0.. run function discgun:score_id/player_score_id
 
+# ローテーター
+    execute as @e[type=area_effect_cloud,tag=D.Gun_Rotater] at @s run function discgun:entity/rotater/main
+
+# モデル
+    execute as @e[type=armor_stand,tag=D.Gun_Model] at @s run function discgun:entity/model/main
+
 # 弾丸
-    execute as @e[type=armor_stand,tag=D.Gun_Bullet] at @s run function discgun:entity/bullet/tick
-    execute as @e[type=armor_stand,tag=D.Gun_H.Bullet] at @s run function discgun:entity/hyper_bullet/tick
-    execute as @e[type=armor_stand,tag=D.Gun_WingBullet] at @s run function discgun:entity/wingman_bullet/tick
+    execute as @e[type=pig,tag=D.Gun_Disc] at @s run function discgun:entity/disc/main
 
 # UUIDヒット後のリセット
     execute as @e[tag=UUIDHit.Reset,nbt=!{HurtTime:0s}] run function discgun:uuid_hit_reset

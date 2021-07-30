@@ -10,19 +10,11 @@
     execute positioned ~ ~1.35 ~ run particle minecraft:crit ^-0.35 ^ ^1 0 0 0 0.35 10 normal @s
 
 # 弾を召喚
-# 上
-    #execute anchored eyes run summon armor_stand ^-0.25 ^ ^ {Silent:1b,Small:1b,Marker:1b,Invisible:1b,Tags:["D.Gun_Projectile","D.Gun_NoHit","D.Gun_BulletInit","D.Gun_Way1"],ArmorItems:[{id:"minecraft:structure_void",Count:1b},{},{},{}]}
-    #execute anchored eyes run summon area_effect_cloud ^ ^0.25 ^10 {Duration:-1,Age:-2147483648,WaitTime:-2147483648,Tags:["D.Gun_Spread"]}
-    #execute as @e[type=armor_stand,tag=D.Gun_BulletInit,distance=..100] at @s run function discgun:entity/bullet/init
-# 下
-    #execute anchored eyes run summon armor_stand ^-0.25 ^ ^ {Silent:1b,Small:1b,Marker:1b,Invisible:1b,Tags:["D.Gun_Projectile","D.Gun_NoHit","D.Gun_BulletInit","D.Gun_Way2"],ArmorItems:[{id:"minecraft:structure_void",Count:1b},{},{},{}]}
-    #execute anchored eyes run summon area_effect_cloud ^0.25 ^-0.25 ^10 {Duration:-1,Age:-2147483648,WaitTime:-2147483648,Tags:["D.Gun_Spread"]}
-    #execute as @e[type=armor_stand,tag=D.Gun_BulletInit,distance=..100] at @s run function discgun:entity/bullet/init
+    execute unless score @s D.Gun_ShotPos matches 1.. anchored eyes rotated ~ 0 run summon pig ^ ^199.7 ^ {Invulnerable:1b,Age:-2147483648,Team:"No_Collision",Silent:1b,PortalCooldown:2147483647,DeathTime:19,DeathLootTable:"miencraft:empty",Tags:["D.Gun_DiscInit","D.Gun_Common"],Passengers:[{id:"minecraft:area_effect_cloud",Duration:2147483647,PortalCooldown:2147483647,Tags:["D.Gun_Rotater","D.Gun_Init"]}],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}]}
+    execute unless score @s D.Gun_ShotPos matches 1.. rotated ~ 0 anchored eyes run summon armor_stand ^ ^-1.5 ^ {Small:1b,Invisible:1b,Tags:["D.Gun_Model"],PortalCooldown:2147483647,Pose:{Head:[0.1f,0.1f,0.1f]},DisabledSlots:4144959,ArmorItems:[{},{},{},{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{CustomModelData:9}}]}
 
-# 下2
-    #execute anchored eyes run summon armor_stand ^-0.25 ^ ^ {Silent:1b,Small:1b,Marker:1b,Invisible:1b,Tags:["D.Gun_Projectile","D.Gun_NoHit","D.Gun_BulletInit","D.Gun_Way3"],ArmorItems:[{id:"minecraft:structure_void",Count:1b},{},{},{}]}
-    #execute anchored eyes run summon area_effect_cloud ^-0.25 ^-0.25 ^10 {Duration:-1,Age:-2147483648,WaitTime:-2147483648,Tags:["D.Gun_Spread"]}
-    #execute as @e[type=armor_stand,tag=D.Gun_BulletInit,distance=..100] at @s run function discgun:entity/bullet/init
+# INIT実行
+    execute as @e[type=pig,tag=D.Gun_DiscInit,limit=1,sort=nearest] at @s run function discgun:entity/disc/init
 
 # 弾丸消費
     execute in overworld run function discgun:item/consume_ammo
