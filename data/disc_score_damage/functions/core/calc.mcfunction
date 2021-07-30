@@ -1,8 +1,8 @@
-#> moza_score_damage:core/calc
+#> disc_score_damage:core/calc
 #
 # 与えるダメージを計算します
 #
-# @within function moza_score_damage:core/attack
+# @within function disc_score_damage:core/attack
 
 #> Temp
 # @private

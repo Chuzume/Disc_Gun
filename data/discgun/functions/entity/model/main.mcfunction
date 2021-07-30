@@ -6,4 +6,4 @@
     execute if entity @s[scores={D.Gun_Mo.ID=1..}] run tag @s add D.Gun_Model_Already
 
 # TPでくっつく
-    execute at @e[tag=D.Gun_Common] if score @s D.Gun_Mo.ID = @e[tag=D.Gun_Common,limit=1,sort=nearest] D.Gun_Mo.ID run tp @s ~ ~-0.75 ~
+    execute at @e[tag=D.Gun_Common] if score @s D.Gun_Mo.ID = @e[tag=D.Gun_Common,limit=1,sort=nearest] D.Gun_Mo.ID run tp @s ~ ~-0.45 ~

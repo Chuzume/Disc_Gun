@@ -53,13 +53,9 @@
     scoreboard objectives add Chuz.F.Check_Y dummy
     scoreboard objectives add Chuz.F.Check_Z dummy
 
-    scoreboard objectives add Chuz.Col_CT_X dummy
-    scoreboard objectives add Chuz.Col_CT_Y dummy
-    scoreboard objectives add Chuz.Col_CT_Z dummy
-
-#時たま使い回されるチーム
-team add No_Collision
-team modify No_Collision collisionRule never
+# 時たま使い回されるチーム
+    team add No_Collision
+    team modify No_Collision collisionRule never
 
 # やぶ台のレシピ
     # モザンビーク

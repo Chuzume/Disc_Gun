@@ -8,11 +8,11 @@
     scoreboard players operation @s D.Gun_Mo.ID = $Mo.ID_Core D.Gun_Mo.ID
 
 # 弾速設定
-    scoreboard players set @s Chuz.Speed 6
+    scoreboard players set @s Chuz.Speed 8
 
 # 大量のスコアをコピー
-    scoreboard players operation @s D.Gun_ScoreID = @p D.Gun_P.ID
-    scoreboard players operation @e[type=area_effect_cloud,tag=D.Gun_Rotater,tag=D.Gun_Init,limit=1,sort=nearest] D.Gun_ScoreID = @s D.Gun_ScoreID
+    scoreboard players operation @s D.Gun_En.ID = @p D.Gun_Pl.ID
+    scoreboard players operation @e[type=area_effect_cloud,tag=D.Gun_Rotater,tag=D.Gun_Init,limit=1,sort=nearest] D.Gun_En.ID = @s D.Gun_En.ID
     execute at @s positioned ~ ~0.85 ~ run scoreboard players operation @e[type=area_effect_cloud,tag=D.Gun_Rotater,tag=D.Gun_Init,limit=1,sort=nearest] D.Gun_Mo.ID = @s D.Gun_Mo.ID
     scoreboard players operation @e[type=armor_stand,tag=D.Gun_Model,tag=!D.Gun_Model_Already,limit=1,sort=nearest] D.Gun_Mo.ID = @s D.Gun_Mo.ID
     data modify entity @s ArmorItems[0].tag.OwnerUUID set from entity @p UUID

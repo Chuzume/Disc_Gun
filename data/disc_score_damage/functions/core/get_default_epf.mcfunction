@@ -1,8 +1,8 @@
-#> moza_score_damage:core/get_default_epf
+#> disc_score_damage:core/get_default_epf
 #
 # プロテクションのEPFを取得します
 #
-# @within function moza_score_damage:core/get_status
+# @within function disc_score_damage:core/get_status
 
 #> Temp
 # @private

@@ -1,4 +1,4 @@
-#> moza_score_damage:core/init
+#> disc_score_damage:core/init
 #
 # スコアボードを用意する
 #
@@ -6,7 +6,7 @@
 
 #> 詳細はfunctionのホバー情報を確認してください
 # @public
-    #declare storage moza_score_damage:
+    #declare storage disc_score_damage:
 
 #> Private
 # @internal

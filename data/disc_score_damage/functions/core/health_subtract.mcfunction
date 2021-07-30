@@ -1,8 +1,8 @@
-#> moza_score_damage:core/health_subtract
+#> disc_score_damage:core/health_subtract
 #
 # MobのHealthを減算する
 #
-# @within function moza_score_damage:core/attack
+# @within function disc_score_damage:core/attack
 
 #> Temp
 # @private
@@ -38,11 +38,12 @@
         execute if entity @s[type=player] run effect give @s instant_damage 1 30 true
 
     # プレイヤーかつヘルス0なら死亡メッセージ
-        execute if entity @s[type=player,tag=D.Gun_Hit.Bullet] if score @s ScoreToHealth matches ..0 run function discgun:message/death/moza_bullet
+        execute if entity @s[type=player,tag=D.Gun_Hit.Disc] if score @s ScoreToHealth matches ..0 run kill @s
+        execute if entity @s[type=player,tag=D.Gun_Hit.Disc] if score @s ScoreToHealth matches ..0 run function discgun:message/death/moza_bullet
         execute if entity @s[type=player,tag=D.Gun_Hit.BulletHS] if score @s ScoreToHealth matches ..0 run function discgun:message/death/moza_bullet_headshot
 # 演出
     #execute if score $Health ScoreDamageCore matches 1.. if entity @s[type=!player] run data modify entity @s ActiveEffects append value {Id:19b,Amplifier:4b,Duration:1}
-    function moza_score_damage:core/damage_indicator
+    function disc_score_damage:core/damage_indicator
 
 # リセット
     scoreboard players reset $Damage ScoreDamageCore
@@ -51,5 +52,4 @@
     scoreboard players reset $hasDependency
 
 # 何から攻撃されたかリセット
-    tag @s remove D.Gun_Hit.Bullet
-    tag @s remove D.Gun_Hit.BulletHS
+    tag @s remove D.Gun_Hit.Disc

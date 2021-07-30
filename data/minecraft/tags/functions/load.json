@@ -1,5 +1,5 @@
 {
   "values": [
-    "discgun:load","moza_score_damage:core/init","score_to_health:load","apex_forwardspread:core/load"
+    "discgun:load","disc_score_damage:core/init","score_to_health:load","apex_forwardspread:core/load"
   ]
 }

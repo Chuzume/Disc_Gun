@@ -1,10 +1,10 @@
-#> moza_score_damage:api/attack
+#> disc_score_damage:api/attack
 #
 # 実行者のエンティティにダメージを与えます。
 #
 # 実行者はHealthを持つEntityである必要があります。
 #
-# @input **storage moza_score_damage:**
+# @input **storage disc_score_damage:**
 #   **Damage**: float
 #       与えるダメージを入力
 #   **EPF**: int
@@ -23,8 +23,8 @@
     #declare team Null
 
 # 引数チェック
-    execute unless data storage moza_score_damage: Damage run tellraw @a [{"text":"ERROR >>","color":"red"},{"text":"引数が足りません","color":"white"},{"text":"\nMissing Damage at moza_score_damage:api/attack","color":"white"}]
+    execute unless data storage disc_score_damage: Damage run tellraw @a [{"text":"ERROR >>","color":"red"},{"text":"引数が足りません","color":"white"},{"text":"\nMissing Damage at disc_score_damage:api/attack","color":"white"}]
 # Healthを持つEntityであれば実行
-    execute if data storage moza_score_damage: Damage if entity @s[type=!#discgun:unhurtable,type=!ender_dragon,nbt={Invulnerable:0b}] run function moza_score_damage:core/attack
+    execute if data storage disc_score_damage: Damage if entity @s[type=!#discgun:unhurtable,type=!ender_dragon,nbt={Invulnerable:0b}] run function disc_score_damage:core/attack
 # enderdragonにヒットした場合、処理をHealthを持つ中央部分に移す
-    execute if data storage moza_score_damage: Damage if entity @s[type=ender_dragon,nbt={Invulnerable:0b}] as @e[type=ender_dragon,team=!null,sort=nearest,limit=1] run function moza_score_damage:core/attack
+    execute if data storage disc_score_damage: Damage if entity @s[type=ender_dragon,nbt={Invulnerable:0b}] as @e[type=ender_dragon,team=!null,sort=nearest,limit=1] run function disc_score_damage:core/attack
