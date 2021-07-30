@@ -5,6 +5,7 @@
     playsound minecraft:entity.blaze.hurt player @a ~ ~ ~ 2 1.75
     playsound minecraft:entity.chicken.egg player @a ~ ~ ~ 2 1.5
     playsound minecraft:entity.chicken.egg player @a ~ ~ ~ 2 2
+    playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 2 2
     scoreboard players reset @s D.Gun_Delay
     tag @s add D.Gun_NormalShot
 

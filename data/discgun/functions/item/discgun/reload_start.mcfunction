@@ -12,6 +12,7 @@
 # スコア
     scoreboard players set @s D.Gun_Ammo -1
     scoreboard players reset @s D.Gun_Delay 
+    scoreboard players reset @s D.Gun_Charge
     tag @s remove D.Gun_NormalShot
     tag @s remove D.Gun_ADSShot
     tag @s remove D.Gun_ZeroReload

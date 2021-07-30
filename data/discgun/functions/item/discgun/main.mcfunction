@@ -21,9 +21,9 @@
     execute unless predicate discgun:sneak run scoreboard players reset @s D.Gun_Charge
 
 # チャージぴかぴか
-    execute if score @s D.Gun_Charge matches 25.. anchored eyes run particle minecraft:dust 0 0.75 1 0.5 ^ ^-0.1 ^1 1 0 0 0 0 normal @s
-    execute if score @s D.Gun_Charge matches 25 run playsound entity.player.levelup player @s ~ ~ ~ 2 2 
-    execute if score @s D.Gun_Charge matches 25 run playsound minecraft:block.note_block.bit player @s ~ ~ ~ 2 2
+    execute if score @s D.Gun_Charge matches 35.. anchored eyes run particle minecraft:dust 1 0.5 0 0.5 ^ ^-0.1 ^1 1 0 0 0 0 normal @s
+    execute if score @s D.Gun_Charge matches 35 run playsound entity.player.levelup player @s ~ ~ ~ 2 2 
+    execute if score @s D.Gun_Charge matches 35 run playsound minecraft:block.note_block.bit player @s ~ ~ ~ 2 2
 
 # Replace処理
     execute if entity @s[nbt={SelectedItem:{id:"minecraft:crossbow"}}] if data storage chuz:context Item.Mainhand.tag.ChuzData.Ammo in overworld run function discgun:item/replaceitem
