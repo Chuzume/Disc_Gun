@@ -28,3 +28,4 @@
 # 弾丸消費
     execute in overworld run function discgun:item/consume_ammo
     scoreboard players remove @s D.Gun_Ammo 1
+    scoreboard players reset @s D.Gun_Charge

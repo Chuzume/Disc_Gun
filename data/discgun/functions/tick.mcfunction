@@ -16,6 +16,7 @@
 
 # 弾丸
     execute as @e[type=pig,tag=D.Gun_Disc] at @s run function discgun:entity/disc/main
+    execute as @e[type=pig,tag=D.Gun_Disc_Charged] at @s run function discgun:entity/disc_charged/main
 
 # UUIDヒット後のリセット
     execute as @e[tag=UUIDHit.Reset,nbt=!{HurtTime:0s}] run function discgun:uuid_hit_reset

@@ -7,3 +7,8 @@
 
 # TPでくっつく
     execute at @e[tag=D.Gun_Common] if score @s D.Gun_Mo.ID = @e[tag=D.Gun_Common,limit=1,sort=nearest] D.Gun_Mo.ID run tp @s ~ ~-0.45 ~
+
+
+# 時間経過で消える
+    scoreboard players add @s D.Gun_Time 1
+    execute if score @s D.Gun_Time matches 230.. run function discgun:entity/disc/death

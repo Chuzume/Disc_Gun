@@ -13,6 +13,7 @@
     scoreboard objectives add D.Gun_Spin dummy
     scoreboard objectives add D.Gun_InvCheck dummy
     scoreboard objectives add D.Gun_ShotPos dummy
+    scoreboard objectives add D.Gun_Charge dummy
 
 # ゲームルール
 # 1: リコイル

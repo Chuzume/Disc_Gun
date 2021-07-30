@@ -38,9 +38,7 @@
         execute if entity @s[type=player] run effect give @s instant_damage 1 30 true
 
     # プレイヤーかつヘルス0なら死亡メッセージ
-        execute if entity @s[type=player,tag=D.Gun_Hit.Disc] if score @s ScoreToHealth matches ..0 run kill @s
-        execute if entity @s[type=player,tag=D.Gun_Hit.Disc] if score @s ScoreToHealth matches ..0 run function discgun:message/death/moza_bullet
-        execute if entity @s[type=player,tag=D.Gun_Hit.BulletHS] if score @s ScoreToHealth matches ..0 run function discgun:message/death/moza_bullet_headshot
+        execute if entity @s[type=player,tag=D.Gun_Hit.Disc] if score @s ScoreToHealth matches ..0 run function discgun:message/death/disc
 # 演出
     #execute if score $Health ScoreDamageCore matches 1.. if entity @s[type=!player] run data modify entity @s ActiveEffects append value {Id:19b,Amplifier:4b,Duration:1}
     function disc_score_damage:core/damage_indicator
