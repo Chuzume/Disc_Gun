@@ -15,7 +15,9 @@
     execute if data storage chuz:context Item.Mainhand.tag.ChuzData{CoolTime:0} if entity @s[predicate=discgun:sneak,scores={D.Gun_Ammo=1..,D.Gun_Shot=0..,D.Gun_Charge=30..59}] run function discgun:item/discgun/shot_charged
 
 # 発砲(スニーク・ハイパーチャージショット)
-    execute if data storage chuz:context Item.Mainhand.tag.ChuzData{CoolTime:0} if entity @s[predicate=discgun:sneak,scores={D.Gun_Ammo=1..,D.Gun_Shot=0..,D.Gun_Charge=60..}] run function discgun:item/discgun/shot_charged_2
+    execute if data storage chuz:context Item.Mainhand.tag.ChuzData{CoolTime:0} if entity @s[predicate=discgun:sneak,scores={D.Gun_Ammo=7..,D.Gun_Shot=0..,D.Gun_Charge=70..}] run function discgun:item/discgun/shot_hypercharged
+# 弾数不足
+    execute if data storage chuz:context Item.Mainhand.tag.ChuzData{CoolTime:0} if entity @s[predicate=discgun:sneak,scores={D.Gun_Ammo=..7,D.Gun_Shot=0..,D.Gun_Charge=70..}] run function discgun:item/discgun/reload_start
 
 # チャージ 
     scoreboard players add @s[predicate=discgun:sneak] D.Gun_Charge 1
@@ -29,9 +31,9 @@
     execute if score @s D.Gun_Charge matches 30 run playsound minecraft:block.note_block.xylophone player @s ~ ~ ~ 2 1.5
 
 # もっとピカピカ
-    execute if score @s D.Gun_Charge matches 60.. anchored eyes run particle minecraft:dust 1 0.75 0 0.35 ^ ^-0.1 ^1 0 0 0 0 0 normal @s
-    execute if score @s D.Gun_Charge matches 60 run playsound entity.player.levelup player @s ~ ~ ~ 2 2 
-    execute if score @s D.Gun_Charge matches 60 run playsound minecraft:block.note_block.xylophone player @s ~ ~ ~ 2 2
+    execute if score @s D.Gun_Charge matches 70.. anchored eyes run particle minecraft:dust 1 0.75 0 0.35 ^ ^-0.1 ^1 0 0 0 0 0 normal @s
+    execute if score @s D.Gun_Charge matches 70 run playsound entity.player.levelup player @s ~ ~ ~ 2 2 
+    execute if score @s D.Gun_Charge matches 70 run playsound minecraft:block.note_block.xylophone player @s ~ ~ ~ 2 2
 
 # Replace処理
     execute if entity @s[nbt={SelectedItem:{id:"minecraft:crossbow"}}] if data storage chuz:context Item.Mainhand.tag.ChuzData.Ammo in overworld run function discgun:item/replaceitem

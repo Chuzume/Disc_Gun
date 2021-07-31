@@ -10,5 +10,5 @@
 
 
 # 時間経過で消える
-    scoreboard players add @s D.Gun_Time 1
-    execute if score @s D.Gun_Time matches 230.. run function discgun:entity/disc/death
+    #scoreboard players add @s D.Gun_Time 1
+    #execute if score @s D.Gun_Time matches 230.. run function discgun:entity/disc/death

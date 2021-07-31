@@ -15,8 +15,7 @@
     execute as @e[type=armor_stand,tag=D.Gun_Model] at @s run function discgun:entity/model/main
 
 # 弾丸
-    execute as @e[type=pig,tag=D.Gun_Disc] at @s run function discgun:entity/disc/main
-    execute as @e[type=pig,tag=D.Gun_Disc_Charged] at @s run function discgun:entity/disc_charged/main
+    execute as @e[type=pig,tag=D.Gun_Common] at @s run function discgun:entity/projectile_check
 
 # UUIDヒット後のリセット
     execute as @e[tag=UUIDHit.Reset,nbt=!{HurtTime:0s}] run function discgun:uuid_hit_reset

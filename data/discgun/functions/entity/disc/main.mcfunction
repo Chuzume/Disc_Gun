@@ -11,7 +11,6 @@
 
 # 時間経過で消える
     scoreboard players add @s D.Gun_Time 1
-    execute if score @s D.Gun_Time matches 200.. run function discgun:entity/disc/death
 
 # 草刈りしなきゃ
     execute if block ~ ~ ~ #discgun:grasses run setblock ~ ~ ~ air destroy

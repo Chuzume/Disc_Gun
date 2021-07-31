@@ -35,7 +35,7 @@
         execute unless entity @s[type=player] unless entity @s[type=ender_dragon] if score $SubtractedHealth ScoreDamageCore matches 1.. run function discgun:uuid_hit_no_kb
 
     # プレイヤーなら見た目だけダメージ
-        execute if entity @s[type=player] run effect give @s instant_damage 1 30 true
+        execute if entity @s[type=player] run summon area_effect_cloud ~ ~ ~ {Duration:14,Age:4,Effects:[{Id:11b,Amplifier:127b,Duration:1,ShowParticles:0b},{Id:7b,Amplifier:0b,Duration:1,ShowParticles:0b}]}
 
     # プレイヤーかつヘルス0なら死亡メッセージ
         execute if entity @s[type=player] if score @s ScoreToHealth matches ..0 run function discgun:message/death/disc
@@ -51,3 +51,4 @@
 # 何から攻撃されたかリセット
     tag @s remove D.Gun_Hit.Disc
     tag @s remove D.Gun_Hit.DiscCharged
+    tag @s remove D.Gun_Hit.DiscCharged_2

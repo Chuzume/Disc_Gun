@@ -7,7 +7,7 @@
     scoreboard players operation @s D.Gun_Mo.ID = $Mo.ID_Core D.Gun_Mo.ID
 
 # 弾速設定
-    scoreboard players set @s Chuz.Speed 12
+    scoreboard players set @s Chuz.Speed 24
 
 # 大量のスコアをコピー
     scoreboard players operation @s D.Gun_En.ID = @p D.Gun_Pl.ID
@@ -26,5 +26,5 @@
     function disc_wall_hit_collision:api/get_first_motion
 
 # タグ削除
-    tag @s add D.Gun_Disc_Charged
+    tag @s add D.Gun_Disc_Charged_2
     tag @s remove D.Gun_DiscInit
