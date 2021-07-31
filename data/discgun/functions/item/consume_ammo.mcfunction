@@ -6,7 +6,9 @@
     scoreboard players reset @s Chuz.Temporary
 
 # 減算
-    scoreboard players remove $Ammo Chuz.Temporary 1
+    execute store result score $AmmoUse Chuz.Temporary run data get entity @s SelectedItem.tag.ChuzData.AmmoUse
+    scoreboard players operation $Ammo Chuz.Temporary -= $AmmoUse Chuz.Temporary
+    #scoreboard players remove $Ammo Chuz.Temporary 1
 
 # 置き換え
     data modify storage chuz:context Item set from entity @s SelectedItem

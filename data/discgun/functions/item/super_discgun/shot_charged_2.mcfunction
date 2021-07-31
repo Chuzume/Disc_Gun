@@ -10,11 +10,11 @@
     tag @s add D.Gun_NormalShot
 
 # 弾を召喚
-    execute positioned ^ ^ ^ run function discgun:item/super_discgun/shot_disc_charged
-    execute positioned ^0.5 ^ ^ run function discgun:item/super_discgun/shot_disc_charged
-    execute positioned ^-0.5 ^ ^ run function discgun:item/super_discgun/shot_disc_charged
-    execute positioned ^1 ^ ^ run function discgun:item/super_discgun/shot_disc_charged
-    execute positioned ^-1 ^ ^ run function discgun:item/super_discgun/shot_disc_charged
+    execute positioned ^ ^ ^ run function discgun:item/super_discgun/shot_disc_charged_2
+    execute positioned ^0.5 ^ ^ run function discgun:item/super_discgun/shot_disc_charged_2
+    execute positioned ^-0.5 ^ ^ run function discgun:item/super_discgun/shot_disc_charged_2
+    execute positioned ^1 ^ ^ run function discgun:item/super_discgun/shot_disc_charged_2
+    execute positioned ^-1 ^ ^ run function discgun:item/super_discgun/shot_disc_charged_2
 
 # 弾丸消費
     execute in overworld run function discgun:item/consume_ammo

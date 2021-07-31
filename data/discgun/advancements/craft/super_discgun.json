@@ -1,0 +1,13 @@
+{
+  "criteria": {
+    "unlock": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "discgun:super_discgun"
+      }
+    }
+  },
+  "rewards": {
+    "function": "discgun:craft/super_discgun"
+  }
+}

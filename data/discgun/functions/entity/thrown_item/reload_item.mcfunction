@@ -15,6 +15,7 @@
 
 # わたす
     execute if data storage chuz:context {Reload:1} if entity @s[nbt={Item:{tag:{ChuzData:{ItemID:DiscGun}}}}] as @p[tag=Chuz.This] run function discgun:item/discgun/reload_start
+    execute if data storage chuz:context {Reload:1} if entity @s[nbt={Item:{tag:{ChuzData:{ItemID:SuperDiscGun}}}}] as @p[tag=Chuz.This] run function discgun:item/super_discgun/reload_start
 
     execute if data storage chuz:context {Reload:1} run kill @s
 

@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#CO",
+        "#ON"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:stonecutter"
+        },
+        "C": {
+            "item": "minecraft:crossbow"
+        },
+        "O": {
+            "tag": "minecraft:logs"
+        },
+        "N": {
+            "item": "minecraft:nether_star"
+        }
+    },
+    "result": {
+        "item": "minecraft:chest",
+        "count": 1
+    }
+}

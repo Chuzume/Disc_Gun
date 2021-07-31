@@ -3,21 +3,22 @@
     tag @s add D.Gun_Hold
 
 # 弾切れならリロード処理に
-    execute if entity @s[scores={D.Gun_Shot=0..}] if data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function discgun:item/discgun/reload_start
+    execute if entity @s[scores={D.Gun_Shot=0..}] if data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function discgun:item/super_discgun/reload_start
 
 # 発砲(非スニーク)
-    execute if data storage chuz:context Item.Mainhand.tag.ChuzData{CoolTime:0} if entity @s[predicate=!discgun:sneak,scores={D.Gun_Ammo=1..,D.Gun_Shot=0..}] run function discgun:item/discgun/shot
+    execute if data storage chuz:context Item.Mainhand.tag.ChuzData{CoolTime:0} if entity @s[predicate=!discgun:sneak,scores={D.Gun_Ammo=5..,D.Gun_Shot=0..}] run function discgun:item/super_discgun/shot
 
 # 発砲(スニーク・ノンチャージショット)
-    execute if data storage chuz:context Item.Mainhand.tag.ChuzData{CoolTime:0} if entity @s[predicate=discgun:sneak,scores={D.Gun_Ammo=1..,D.Gun_Shot=0..,D.Gun_Charge=..30}] run function discgun:item/discgun/shot
+    execute if data storage chuz:context Item.Mainhand.tag.ChuzData{CoolTime:0} if entity @s[predicate=discgun:sneak,scores={D.Gun_Ammo=5..,D.Gun_Shot=0..,D.Gun_Charge=..30}] run function discgun:item/discgun/shot
 
 # 発砲(スニーク・チャージショット)
-    execute if data storage chuz:context Item.Mainhand.tag.ChuzData{CoolTime:0} if entity @s[predicate=discgun:sneak,scores={D.Gun_Ammo=1..,D.Gun_Shot=0..,D.Gun_Charge=30..59}] run function discgun:item/discgun/shot_charged
+    execute if data storage chuz:context Item.Mainhand.tag.ChuzData{CoolTime:0} if entity @s[predicate=discgun:sneak,scores={D.Gun_Ammo=5..,D.Gun_Shot=0..,D.Gun_Charge=30..59}] run function discgun:item/super_discgun/shot_charged
 
 # 発砲(スニーク・ハイパーチャージショット)
-    execute if data storage chuz:context Item.Mainhand.tag.ChuzData{CoolTime:0} if entity @s[predicate=discgun:sneak,scores={D.Gun_Ammo=7..,D.Gun_Shot=0..,D.Gun_Charge=70..}] run function discgun:item/discgun/shot_hypercharged
+    execute if data storage chuz:context Item.Mainhand.tag.ChuzData{CoolTime:0} if entity @s[predicate=discgun:sneak,scores={D.Gun_Ammo=5..,D.Gun_Shot=0..,D.Gun_Charge=70..}] run function discgun:item/super_discgun/shot_charged_2
+
 # 弾数不足
-    execute if data storage chuz:context Item.Mainhand.tag.ChuzData{CoolTime:0} if entity @s[predicate=discgun:sneak,scores={D.Gun_Ammo=..7,D.Gun_Shot=0..,D.Gun_Charge=70..}] run function discgun:item/discgun/reload_start
+    execute if data storage chuz:context Item.Mainhand.tag.ChuzData{CoolTime:0} if entity @s[predicate=discgun:sneak,scores={D.Gun_Ammo=..5,D.Gun_Shot=0..}] run function discgun:item/discgun/reload_start
 
 # チャージ 
     scoreboard players add @s[predicate=discgun:sneak] D.Gun_Charge 1

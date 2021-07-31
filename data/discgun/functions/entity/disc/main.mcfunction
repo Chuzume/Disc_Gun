@@ -16,7 +16,7 @@
     execute if block ~ ~ ~ #discgun:grasses run setblock ~ ~ ~ air destroy
 
 #離れすぎても消える
-    execute at @a if score @s D.Gun_En.ID = @p D.Gun_P.ID unless entity @s[distance=..50] run function discgun:entity/disc/death
+    execute at @a if score @s D.Gun_En.ID = @p D.Gun_Pl.ID unless entity @s[distance=..100] at @s run function discgun:entity/disc/death
 
 # 壁反射
     execute if entity @s[tag=Chuz.HitWall] run function discgun:entity/disc/hit_wall

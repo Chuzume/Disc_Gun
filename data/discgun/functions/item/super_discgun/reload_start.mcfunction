@@ -3,7 +3,7 @@
     data modify storage chuz:context Item.Mainhand set from entity @s SelectedItem
     
 # リロード
-    item replace entity @s weapon.mainhand with warped_fungus_on_a_stick{ChuzData:{NoOffhand:1b,ItemID:DiscGun_Reload},display:{Name:'[{"text":"Disc Gun ","color":"aqua","italic":false},{"text":" | Reloading |","color":"gray","italic":false}]',Lore:['{"text":" "}','{"text":"[Reloading!]","color":"white","italic":false}','{"text":" "}','{"text":"\\"リロードが必要なゲームなんだっけ？\\"","color":"gray","italic":false}']},HideFlags:7,Unbreakable:1b,CustomModelData:6,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:-100,Operation:0,UUID:[I;1214350222,1737049035,-2006853743,-1572707679],Slot:"mainhand"}]} 1
+    item replace entity @s weapon.mainhand with warped_fungus_on_a_stick{ChuzData:{NoOffhand:1b,ItemID:SuperDiscGun_Reload},display:{Name:'[{"text":"Super Disc Gun ","color":"#9003fc","italic":false},{"text":" | Reloading |","color":"gray","italic":false}]',Lore:['{"text":" "}','{"text":"[Reloading!]","color":"white","italic":false}','{"text":" "}','{"text":"\\"まるで悪い夢だ\\"","color":"gray","italic":false}']},HideFlags:7,Unbreakable:1b,CustomModelData:10,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:-100,Operation:0,UUID:[I;1214350222,1737049035,-2006853743,-1572707679],Slot:"mainhand"}]} 1
 
 # 音
     playsound minecraft:block.iron_door.close player @a ~ ~ ~ 1 1.5
