@@ -8,7 +8,7 @@
     playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 2 2
     scoreboard players reset @s D.Gun_Delay
     tag @s add D.Gun_NormalShot
-    tag @s add D.Gun_NormalShot
+    tag @s add Chuz.This
 
 # 弾を召喚
     execute positioned ^ ^ ^ run function discgun:item/super_discgun/shot_disc_charged_2
