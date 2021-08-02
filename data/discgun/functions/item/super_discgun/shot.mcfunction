@@ -5,7 +5,7 @@
     playsound minecraft:entity.blaze.hurt player @a ~ ~ ~ 2 1.75
     playsound minecraft:entity.chicken.egg player @a ~ ~ ~ 2 1.5
     playsound minecraft:block.note_block.xylophone player @s ~ ~ ~ 2 1
-     scoreboard players reset @s D.Gun_Delay
+    scoreboard players reset @s D.Gun_Delay
     tag @s add D.Gun_NormalShot
 
 # 弾を召喚
@@ -19,3 +19,6 @@
 # 弾丸消費
     execute in overworld run function discgun:item/consume_ammo
     scoreboard players reset @s D.Gun_Charge
+    
+# タグ削除
+    tag @s remove Chuz.This

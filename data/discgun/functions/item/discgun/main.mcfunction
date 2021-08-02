@@ -24,12 +24,12 @@
     execute unless predicate discgun:sneak run scoreboard players reset @s D.Gun_Charge
 
 # チャージぴかぴか
-    execute if score @s D.Gun_Charge matches 30.. anchored eyes run particle minecraft:dust 1 0.5 0 0.5 ^ ^-0.1 ^1 0 0 0 0 0 normal @s
+    execute if score @s D.Gun_Charge matches 30..60 anchored eyes run particle minecraft:dust 1 0.5 0 0.5 ^ ^-0.1 ^1 0 0 0 0 0 normal @s
     execute if score @s D.Gun_Charge matches 30 run playsound entity.player.levelup player @s ~ ~ ~ 2 2 
     execute if score @s D.Gun_Charge matches 30 run playsound minecraft:block.note_block.xylophone player @s ~ ~ ~ 2 1.5
 
 # もっとピカピカ
-    execute if score @s D.Gun_Charge matches 60.. anchored eyes run particle minecraft:dust 1 0.75 0 0.35 ^ ^-0.1 ^1 0 0 0 0 0 normal @s
+    execute if score @s D.Gun_Charge matches 60.. anchored eyes run particle minecraft:dust 0 1 1 0.35 ^ ^-0.1 ^1 0 0 0 0 0 normal @s
     execute if score @s D.Gun_Charge matches 60 run playsound entity.player.levelup player @s ~ ~ ~ 2 2 
     execute if score @s D.Gun_Charge matches 60 run playsound minecraft:block.note_block.xylophone player @s ~ ~ ~ 2 2
 

@@ -8,6 +8,7 @@
     playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 2 2
     scoreboard players reset @s D.Gun_Delay
     tag @s add D.Gun_NormalShot
+    tag @s add Chuz.This
 
 # 銃口からピカッ
     execute positioned ~ ~1.35 ~ run particle minecraft:crit ^-0.35 ^ ^1 0 0 0 0.35 10 normal @s
@@ -23,3 +24,6 @@
     execute in overworld run function discgun:item/consume_ammo
     scoreboard players remove @s D.Gun_Ammo 1
     scoreboard players reset @s D.Gun_Charge
+    
+# タグ削除
+    tag @s remove Chuz.This

@@ -1,4 +1,8 @@
 
+# 生死判定
+    tag @a[nbt=!{Health:0.0f}] remove D.Gun_Death
+    tag @a[nbt={Health:0.0f}] add D.Gun_Death
+
 # タグ設定
     tag @a[gamemode=!survival,gamemode=!adventure] add D.Gun_Unhurtable
 

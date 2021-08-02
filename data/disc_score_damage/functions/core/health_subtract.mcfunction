@@ -9,6 +9,9 @@
     #declare objective ScoreToHealth
     #declare score_holder $SubtractedHealth
 
+# 大雑把死なない対策
+    execute if entity @s[type=player] if score @s ScoreToHealth matches ..60 run function discgun:message/death/disc
+
 # MobのHealthよりダメージが高い場合Healthに設定
     scoreboard players operation $Damage ScoreDamageCore < $Health ScoreDamageCore
 # Health減算
