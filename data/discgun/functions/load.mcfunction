@@ -4,6 +4,7 @@
     scoreboard objectives add D.Gun_Shot minecraft.used:minecraft.crossbow
     scoreboard objectives add D.Gun_Sneak minecraft.custom:minecraft.sneak_time
     scoreboard objectives add D.Gun_Time dummy
+    scoreboard objectives add D.Gun_Life dummy
     scoreboard objectives add D.Gun_Range dummy
     scoreboard objectives add D.Gun_Speed dummy
     scoreboard objectives add D.Gun_Temp dummy

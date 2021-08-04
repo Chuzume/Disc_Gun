@@ -10,11 +10,18 @@
     tag @s add Chuz.This
 
 # 弾を召喚
+    scoreboard players set _ D.Gun_Life 100
     execute positioned ^ ^ ^ run function discgun:item/super_discgun/shot_disc
-    execute positioned ^0.5 ^ ^ run function discgun:item/super_discgun/shot_disc
-    execute positioned ^-0.5 ^ ^ run function discgun:item/super_discgun/shot_disc
-    execute positioned ^1 ^ ^ run function discgun:item/super_discgun/shot_disc
-    execute positioned ^-1 ^ ^ run function discgun:item/super_discgun/shot_disc
+    execute as @e[type=pig,tag=D.Gun_DiscInit,limit=1,sort=nearest] at @s rotated as @p[tag=Chuz.This] run function discgun:entity/disc/init
+    execute positioned ^0.1 ^ ^ run function discgun:item/super_discgun/shot_disc
+    execute as @e[type=pig,tag=D.Gun_DiscInit,limit=1,sort=nearest] at @s rotated as @p[tag=Chuz.This] facing ^0.087489 ^ ^1 run function discgun:entity/disc/init
+    execute positioned ^-0.1 ^ ^ run function discgun:item/super_discgun/shot_disc
+    execute as @e[type=pig,tag=D.Gun_DiscInit,limit=1,sort=nearest] at @s rotated as @p[tag=Chuz.This] facing ^-0.087489 ^ ^1 run function discgun:entity/disc/init
+    execute positioned ^0.2 ^ ^ run function discgun:item/super_discgun/shot_disc
+    execute as @e[type=pig,tag=D.Gun_DiscInit,limit=1,sort=nearest] at @s rotated as @p[tag=Chuz.This] facing ^0.176327 ^ ^1 run function discgun:entity/disc/init
+    execute positioned ^-0.2 ^ ^ run function discgun:item/super_discgun/shot_disc
+    execute as @e[type=pig,tag=D.Gun_DiscInit,limit=1,sort=nearest] at @s rotated as @p[tag=Chuz.This] facing ^-0.176327 ^ ^1 run function discgun:entity/disc/init
+    scoreboard players reset _ D.Gun_Life
 
 
 # 弾丸消費
