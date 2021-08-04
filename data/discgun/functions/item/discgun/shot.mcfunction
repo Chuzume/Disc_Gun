@@ -24,9 +24,9 @@
     scoreboard players reset @s[scores={D.Gun_ShotPos=2..}] D.Gun_ShotPos
 
 # INIT実行
-    scoreboard players set _ D.Gun_Life 200
+    scoreboard players set $D.Gun_Life D.Gun_Life 200
     execute as @e[type=pig,tag=D.Gun_DiscInit,limit=1,sort=nearest] at @s rotated as @p[tag=Chuz.This] run function discgun:entity/disc/init
-    scoreboard players reset _ D.Gun_Life
+    scoreboard players reset $D.Gun_Life D.Gun_Life
 
 # 弾丸消費
     execute in overworld run function discgun:item/consume_ammo

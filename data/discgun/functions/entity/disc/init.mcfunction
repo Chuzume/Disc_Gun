@@ -15,7 +15,7 @@
     execute at @s positioned ~ ~0.85 ~ run scoreboard players operation @e[type=area_effect_cloud,tag=D.Gun_Rotater,tag=D.Gun_Init,limit=1,sort=nearest] D.Gun_Mo.ID = @s D.Gun_Mo.ID
     execute at @s run scoreboard players operation @e[type=armor_stand,tag=D.Gun_Model,tag=!D.Gun_Model_Already,limit=1,sort=nearest] D.Gun_Mo.ID = @s D.Gun_Mo.ID
     execute at @s run data modify entity @s ArmorItems[0].tag.OwnerUUID set from entity @p[tag=Chuz.This] UUID
-    scoreboard players operation @s D.Gun_Life = _ D.Gun_Life
+    scoreboard players operation @s D.Gun_Life = $D.Gun_Life D.Gun_Life
 
 # ローテーターの向きを実行時の向きに
     execute at @s positioned ~ ~0.85 ~ run execute store result entity @e[tag=D.Gun_Rotater,tag=D.Gun_Init,limit=1,sort=nearest] Rotation[0] float 1 run data get entity @s Rotation[0]

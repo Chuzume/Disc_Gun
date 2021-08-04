@@ -1,3 +1,10 @@
 
+<=2021/08/04 1.0.1=>
+・Super Disc Gunの弾が少し拡散して飛ぶように
+・Super Disc Gunから放たれたディスクは少し速く消えるように
+    くまさん(https://github.com/Kuma-TachiRen)に感謝を！
+・Super Disc Gunの発砲音をちょっと重めに
+・Super Disc Gunのチャージエフェクトが5倍に！
+
 <=2021/08/03 1.0.0=>
 ・公開

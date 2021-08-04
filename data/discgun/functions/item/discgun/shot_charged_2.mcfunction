@@ -18,9 +18,9 @@
     execute rotated ~ 0 anchored eyes run summon armor_stand ^ ^-1.5 ^ {Small:1b,Invisible:1b,Tags:["D.Gun_Model"],PortalCooldown:2147483647,Pose:{Head:[0.1f,0.1f,0.1f]},DisabledSlots:4144959,ArmorItems:[{},{},{},{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{CustomModelData:9}}]}
 
 # INIT実行
-    scoreboard players set _ D.Gun_Life 200
+    scoreboard players set $D.Gun_Life D.Gun_Life 200
     execute as @e[type=pig,tag=D.Gun_DiscInit,limit=1,sort=nearest] at @s rotated as @p[tag=Chuz.This] run function discgun:entity/disc_charged_2/init
-    scoreboard players reset _ D.Gun_Life
+    scoreboard players reset $D.Gun_Life D.Gun_Life
 
 # 弾丸消費
     execute in overworld run function discgun:item/consume_ammo
