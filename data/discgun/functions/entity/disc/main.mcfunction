@@ -3,8 +3,10 @@
 
 # 移動
     execute if entity @s[tag=!Chuz.HitWall] run function disc_wall_hit_collision:api/col_check
-    execute at @e[type=area_effect_cloud,tag=D.Gun_Rotater] if score @e[type=area_effect_cloud,tag=D.Gun_Rotater,limit=1,sort=nearest] D.Gun_Mo.ID = @s D.Gun_Mo.ID rotated as @e[type=area_effect_cloud,tag=D.Gun_Rotater,tag=!D.Gun_Init,limit=1,sort=nearest] run function discgun:move
-    execute rotated as @e[type=area_effect_cloud,tag=D.Gun_Rotater,tag=!D.Gun_Init,limit=1,sort=nearest] positioned ^ ^ ^-2 run particle electric_spark ~ ~0.3 ~ 0.05 0.05 0.05 0 2 force
+    tag @s add D.Gun_This
+    execute as @e[type=area_effect_cloud,tag=D.Gun_Rotater,distance=..3] if score @s D.Gun_Mo.ID = @e[type=pig,tag=D.Gun_This,distance=..0,limit=1] D.Gun_Mo.ID rotated as @s run function discgun:move
+    tag @s remove D.Gun_This
+    execute rotated as @e[type=area_effect_cloud,tag=D.Gun_Rotater,tag=!D.Gun_Init,distance=..3,sort=nearest,limit=1] positioned ^ ^ ^-2 run particle electric_spark ~ ~0.3 ~ 0.05 0.05 0.05 0 2 force
 
 # 壁反射
     function discgun:entity/rotater/ricochet
@@ -31,7 +33,7 @@
 # プレイヤーから出るまでヒット判定ナシ
     #execute at @a[distance=5..10] if score @s D.Gun_En.ID = @p D.Gun_Pl.ID run tag @s remove D.Gun_NoHit
 
-# 一定時間経過まで判定ナシ  
+# 一定時間経過まで判定ナシ
     tag @s[scores={D.Gun_Time=4..}] remove D.Gun_NoHit
 
 # プレイヤーの衝突判定
