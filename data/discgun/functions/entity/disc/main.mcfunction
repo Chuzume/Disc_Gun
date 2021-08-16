@@ -4,7 +4,7 @@
 # 移動
     execute if entity @s[tag=!Chuz.HitWall] run function disc_wall_hit_collision:api/col_check
     tag @s add D.Gun_This
-execute as @e[type=area_effect_cloud,tag=D.Gun_Rotater,distance=..3] if score @s D.Gun_Mo.ID = @e[type=pig,tag=D.Gun_This,distance=..0,limit=1] D.Gun_Mo.ID at @s as @e[type=pig,tag=D.Gun_This,distance=..3] run function discgun:move
+    execute as @e[type=area_effect_cloud,tag=D.Gun_Rotater,distance=..3] if score @s D.Gun_Mo.ID = @e[type=pig,tag=D.Gun_This,distance=..0,limit=1] D.Gun_Mo.ID at @s as @e[type=pig,tag=D.Gun_This,distance=..3] run function discgun:move
     tag @s remove D.Gun_This
     execute rotated as @e[type=area_effect_cloud,tag=D.Gun_Rotater,tag=!D.Gun_Init,distance=..3,sort=nearest,limit=1] positioned ^ ^ ^-2 run particle electric_spark ~ ~0.3 ~ 0.05 0.05 0.05 0 2 force
 
