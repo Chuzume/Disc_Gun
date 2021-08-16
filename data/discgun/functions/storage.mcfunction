@@ -6,8 +6,8 @@
 # リロード
     execute if entity @s[tag=D.Gun_Hold,scores={D.Gun_Throw=0..}] run function discgun:item/reload
 
-# リロードできるアイテムなら
-    execute unless data storage chuz:context Item.Mainhand.tag{Reloadable:true} run tag @s remove D.Gun_Hold
+# タグ削除
+    tag @s remove D.Gun_Hold
 
 # 武器
     execute if data storage chuz:context Item.Mainhand.tag.ChuzData{ItemID:DiscGun} run function discgun:item/discgun/main
